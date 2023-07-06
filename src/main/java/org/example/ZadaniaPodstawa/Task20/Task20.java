@@ -15,7 +15,7 @@ public class Task20 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int liczba = random.nextInt(9);
+        int liczba = random.nextInt(101);
         System.out.println(liczba);
         int wybor;
 

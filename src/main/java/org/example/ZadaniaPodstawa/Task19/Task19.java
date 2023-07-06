@@ -11,7 +11,7 @@ public class Task19 {
     public static void main(String[] args) {
 
         Poem poem1 = new Poem(new Author("Polska", "Mickiewicz"), 25);
-        Poem poem2 = new Poem(new Author("USA", "King"), 125);
+        Poem poem2 = new Poem(new Author("USA", "King"), 1000000125);
         Poem poem3 = new Poem(new Author("Polska", "Szymborska"), 12325);
 
         Poem[] poems = {poem1, poem2, poem3};

@@ -18,7 +18,7 @@ public class Task17 {
         System.out.println("Podaj date zajec w formacie RRRR-MM-DD");
 
         String data = scanner.nextLine();
-
+       // DateTimeFormatter dtr = DateTimeFormatter.ofPattern("rrrr-MM-dd")
         LocalDate courseDate = LocalDate.parse(data, DateTimeFormatter.ISO_DATE);
 
         LocalDate todaDate = LocalDate.now();
