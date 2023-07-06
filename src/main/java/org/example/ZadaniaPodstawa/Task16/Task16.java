@@ -2,6 +2,11 @@ package org.example.ZadaniaPodstawa.Task16;
 
 import java.util.Scanner;
 
+//Napisz program, który pobierze od użytkownika 10 liczb (zmiennych typu int) i
+// wypisze długość najdłuższego takiego podciągu tych liczb, który jest rosnący.
+// Przykładowo, dla liczb: „1, 3, 8, 4, 2, 5, 6, 11, 13, 7” program powinien wypisać „5”
+// jako długość najdłuższego rosnącego podciągu (w przykładzie podkreślonego).
+
 public class Task16 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -15,21 +20,24 @@ public class Task16 {
 
         int currentBiggest= liczby[0];
         int counter = 1;
-        for (int i : liczby) {
-            if(i>currentBiggest)
-            {
-                currentBiggest=i;
+        int currentLongest=1;
+        //for (int i : liczby)
+            for (int i = 1; i < liczby.length ; i++) {
+            if(liczby[i]>currentBiggest)
+             {
+                currentBiggest=liczby[i];
                 counter++;
-                // tu musze dodać jeszcze dodatkowa zmienna "Longest strike". I teraz z kazdym tazem, jak kolejna liczba będzie mniejsza będe musial sprawdzac
-                // czy counter jest teraz wiekszy czy mniejszy. w skrocie - musze gdzies zapisywac najiekszy doychczas łanuch
+                if(counter>currentLongest)
+                {
+                    currentLongest=counter;
+                }
             } else
             {
-                counter =0;
+                counter =1;
+                currentBiggest=liczby[i];
             }
-
         }
-        System.out.println(counter);
+        System.out.println(currentLongest);
     }
-
 
 }

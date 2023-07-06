@@ -7,6 +7,10 @@ import java.util.Scanner;
 
 import static java.time.format.DateTimeFormatter.ofLocalizedDate;
 
+//Napisz program, który pobierze od użytkownika datę najbliższych Twoich zajęć w SDA i
+// obliczy ile dni do nich pozostało. Podpowiedź: datę wczytaj jako typ String i przeparsuj na LocalDate.
+// Obecną datę pobierz z metody LocalDate.now().
+
 public class Task17 {
     public static void main(String[] args) {
 
