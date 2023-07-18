@@ -1,4 +1,4 @@
-package org.example.ZadaniaStreamy;
+package org.example.ZadaniaStreamy.Task1;
 
 import java.util.Scanner;
 
