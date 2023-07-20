@@ -29,6 +29,7 @@ public class Task8 {
 
         List<Employee> listaSortowana = list.stream()
                 .sorted(Comparator.comparing(Employee::getName))
+//                .sorted(Comparator.comparing(Employee::getName).reversed()) --> odwrócone sortowanie dzięki . reversed()
                 .toList();
 
         System.out.println(listaSortowana);
