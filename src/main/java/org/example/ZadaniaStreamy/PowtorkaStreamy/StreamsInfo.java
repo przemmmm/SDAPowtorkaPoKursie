@@ -6,6 +6,11 @@ Strumienie służą do przetwarzania danych. Zawierają dane i pozwalają na opi
 Strumienie pozwalają w łatwy sposób zrównoleglić pracę na danych. Dzięki temu przetwarzanie dużych zbiorów
 danych może być dużo szybsze.
 
+Strumienie to nie struktury danych
+W poprzednich artykułach opisałem kilka struktur danych. Przykładem struktur danych może być lista wiązana czy mapa.
+Strumienie nie są strukturą danych. W odróżnieniu od struktur nie służą do przechowywania danych.
+Strumienie jedynie pomagają określić operacje, które na tych danych chcesz wykonać.
+
 RODZAJE OPERACJI NA STRUMIENIACH
 
 -> TWORZENIE STRUMIENI
@@ -36,16 +41,31 @@ Strumień danych z pliku:
                                 // do something
 
 
-OPERACJE NA STREAMACH (te popularne
+-> OPERACJE NA STREAMACH (te popularne)
 
 filter – zwraca strumień zawierający tylko te elementy dla których filtr zwrócił wartość true,
 map – każdy z elementów może zostać zmieniony do innego typu, nowy obiekt zawarty jest w nowym strumieniu,
 sort - sortuje wg jakiegos schematu, np. od najmniejszej do największej
 Allmatch - sprawdza, czy wszystkie elementy spleniaja dany warunek. Konczy weryfikacje przy pierwszym niespelniajacym
 Anymatch - sprawdza, czy ktorys z elementow spelnia dany warunek. Konczy przy pierwszym spelniającycm
-None match - sprawdza, czy zaden z elementow nie spelnia raunku. 
+None match - sprawdza, czy zaden z elementow nie spelnia warunku. Konczy przy pierwszym spelniającycm
+Max / Min - wskazuje waertosci max i min
 
 
+-> KOŃCZENIE STRUMIENI
+
+
+Operacjami kończącymi są wszystkie, które zwracają typ inny niż Stream. Metody tego typu mogą także nie zwracać żadnych wartości.
+
+forEach – wykonuje zadaną operację dla każdego elementu,
+count – zwraca liczbę elementów w strumieniu,
+allMatch – zwraca flagę informującą czy wszystkie elementy spełniają warunek. Przestaje sprawdzać na pierwszym elemencie, który tego warunku nie spełnia,
+collect – pozwala na utworzenie nowego typu na podstawie elementów strumienia. Przy pomocy tej metody można na przykład utworzyć listę. Klasa Collectors zawiera sporo gotowych implementacji.
+
+DOBRE PRAKTYKI NA STRUMIENIACH
+- najpierw filtorowanie - pozwala na zredukowanie ilosci danych do dalszej obróbki
+- nie naduzywać strumieni, pętle też są spoko
+- nie uzywac skomplikowanych wyrażen lambda
 
 
  */
