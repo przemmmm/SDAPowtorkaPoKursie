@@ -73,6 +73,19 @@ public class Mapy {
             
         }
 
+       if(employeesAndSalary.containsKey("Kowalski")){
+           System.out.println("Kowalski jest na liscie");
+       } else System.out.println("Kowalskiego nie ma na liscie");
+
+        System.out.println(  isNamePresent(employeesAndSalary, "Wisniewski"));
         
+
+        
+    }
+
+    public static String isNamePresent(Map<String, Double> mapa, String name){
+        if(mapa.containsKey(name)){
+            return name+ " jest na liscie.";
+        } else return "Nazwiska " + name + " nie ma na liscie.";
     }
 }
