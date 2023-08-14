@@ -78,7 +78,7 @@ public class Mapy {
        } else System.out.println("Kowalskiego nie ma na liscie");
 
         System.out.println(  isNamePresent(employeesAndSalary, "Wisniewski"));
-        
+
 
         
     }
