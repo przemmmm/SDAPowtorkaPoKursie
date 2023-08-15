@@ -1,9 +1,9 @@
 package org.example.ZadaniaZaawansowana.Task3;
 
-public class Shape {
+public abstract class Shape {
 
-    Color color;
-    boolean isFilled;
+    protected Color color;
+    protected boolean isFilled;
 
     public Shape(){
         this.color = Color.UNKNOWN;
@@ -30,6 +30,9 @@ public class Shape {
     public void setFilled(boolean filled) {
         isFilled = filled;
     }
+
+    public abstract float getArea();
+    public abstract float getPerimeter();
 
     @Override
     public String toString() {

@@ -27,17 +27,18 @@ public class Rectangle extends Shape{
         this.length = length;
     }
 
-    public double getArea(){
-        return width*length;
+    public float getArea(){
+        return (float) (width*length);
 
     }
 
-    public double getPerimeter(){
-        return 2*(width+length);
+    public float getPerimeter(){
+        return (float)(2*(width+length));
     }
 
     @Override
     public String toString() {
         return String.format("Rectangle with width=%f and length=%f which is a subclass off %f", width, length, super.toString());
+        //super.toString() wywoluje metode toString z wyzszej klasy
     }
 }
