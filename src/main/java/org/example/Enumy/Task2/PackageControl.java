@@ -1,6 +1,6 @@
 package org.example.Enumy.Task2;
 
-public class Task2 {
+public class PackageControl {
 
     public static void main(String[] args) {
 
