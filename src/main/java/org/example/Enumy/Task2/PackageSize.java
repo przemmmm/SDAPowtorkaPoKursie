@@ -7,20 +7,23 @@ public enum PackageSize {
     UNKNOWN(0, 0);
 
     private final float minSizeCM;
-    private final  float maxSizeCM;
+    private final float maxSizeCM;
 
     PackageSize(float minSizeCM, float maxSizeCM) {
         this.minSizeCM = minSizeCM;
         this.maxSizeCM = maxSizeCM;
     }
 
-    public static PackageSize packageSize(float minSizeCM, float maxSizeCM)
-    {
-        for (PackageSize packageSize : values() ) {
-            if(minSizeCM>= packageSize.minSizeCM && maxSizeCM<= packageSize.maxSizeCM)
-            {
-                return packageSize;
+    public static PackageSize packageSize(float minSizeCM, float maxSizeCM) {
+        for (PackageSize value : values()) {
+            if (minSizeCM >= value.minSizeCM && maxSizeCM < value.maxSizeCM) {
+                return value;
             }
-        } return UNKNOWN;
+
+        }
+        return UNKNOWN;
     }
+
 }
+
+

@@ -9,18 +9,27 @@ public enum CoffeType {
     ESPRESSO(0, CoffeIntense.STRONG),
     MOCCA(20, CoffeIntense.MEDIUM);
 
-   public int milk;
-   public CoffeIntense coffeIntense;
+   public  final int milk;
+   public final CoffeIntense coffeIntense;
 
     CoffeType(int milk, CoffeIntense coffeIntense) {
         this.milk = milk;
         this.coffeIntense = coffeIntense;
     }
 
+    public int getMilk() {
+        return milk;
+    }
+
+    public CoffeIntense getCoffeIntense() {
+        return coffeIntense;
+    }
+
     public void returnInfo(){
-        if(coffeIntense.equals("STRONG")){
+        if(getCoffeIntense().name().equals("STRONG"))
+        {
             System.out.println("o chuj jaka mocna kawa");
-        }
-        System.out.println("slaba kawa");
+
+        }  else  System.out.println("slaba kawa");
     }
 }
